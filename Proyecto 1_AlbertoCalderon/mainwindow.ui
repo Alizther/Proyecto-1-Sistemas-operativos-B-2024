@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1313</width>
+    <height>699</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1313</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>20</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(94, 92, 100);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="txtTitulo">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>20</y>
+      <width>488</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Sans</family>
+      <pointsize>20</pointsize>
+      <italic>false</italic>
+      <fontweight>DemiBold</fontweight>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255)</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;Simulador de Procesos&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="textNumProcesos">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>100</y>
+      <width>231</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Número de Procesos:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderNumProcesos">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>170</y>
+      <width>231</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Orientation::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="numProcesos">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>110</y>
+      <width>51</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSimular">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>550</y>
+      <width>251</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 255);
+color: rgb(255,255,255);
+</string>
+    </property>
+    <property name="text">
+     <string>Empezar</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="AlgorithmSelect">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>363</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Primero en llegar primero en ejecutar (FCFS)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Primero el trabajo más corto (SJF)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Selección aleatoria</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Planificación basada en prioridades (No Expulsivo)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Turno rotativo (round robin)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Primero el menor tiempo restante (SRTF)</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Planificación basada en prioridades (Expulsivo)</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="txtAlgoritmo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>80</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Algoritmo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtResultados">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>100</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Resultados</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtEspera">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>170</y>
+      <width>131</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Tiempo de espera:  </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtEsperaAvg">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>250</y>
+      <width>181</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Medio:  0ms</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtEsperaMin">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>210</y>
+      <width>161</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Mínimo:  0ms</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtEsperaMax">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>290</y>
+      <width>181</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Máximo:  0ms</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtRespuesta">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>170</y>
+      <width>156</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Tiempo de Respuesta:  </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtRespuestaMax">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>290</y>
+      <width>181</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Máximo:  0ms</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtRespuestaAvg">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>250</y>
+      <width>191</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Medio:  0ms</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtRespuestaMin">
+    <property name="geometry">
+     <rect>
+      <x>1120</x>
+      <y>210</y>
+      <width>161</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Mínimo:  0ms</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtTiempoTotal">
+    <property name="geometry">
+     <rect>
+      <x>1030</x>
+      <y>370</y>
+      <width>161</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Tiempo Total:  0ms</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtInactivo">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>470</y>
+      <width>251</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Cpu Inactivo: 0ms [0.0%]</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="txtEjecutando">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>420</y>
+      <width>301</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Ejecutando CPU: 0ms [0.0%]</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>180</y>
+      <width>811</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <property name="styleSheet">
+      <string notr="true">Color: rgb(255, 255, 255);</string>
+     </property>
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <property name="styleSheet">
+      <string notr="true">Color: rgb(255, 255, 255);</string>
+     </property>
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
